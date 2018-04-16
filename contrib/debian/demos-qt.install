@@ -1,0 +1,6 @@
+usr/local/bin/demos-qt usr/bin
+share/pixmaps/demos32.xpm usr/share/pixmaps
+share/pixmaps/demos16.xpm usr/share/pixmaps
+share/pixmaps/demos128.png usr/share/pixmaps
+debian/demos-qt.desktop usr/share/applications
+debian/demos-qt.protocol usr/share/kde4/services/

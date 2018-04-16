@@ -1,0 +1,22 @@
+[Unit]
+Description=Demos's distributed currency daemon
+After=network.target
+
+[Service]
+User=demoscore
+Group=demoscore
+
+Type=forking
+PIDFile=/var/lib/demosd/demosd.pid
+ExecStart=/usr/bin/demosd -daemon -pid=/var/lib/demosd/demosd.pid \
+-conf=/etc/demoscore/demos.conf -datadir=/var/lib/demosd -disablewallet
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

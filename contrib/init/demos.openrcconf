@@ -1,0 +1,33 @@
+# /etc/conf.d/demosd: config file for /etc/init.d/demosd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/demoscore/demos.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/demosd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/demosd.pid"
+
+# Where to write demosd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/demosd"
+
+# User and group to own demosd process
+#BITCOIND_USER="demoscore"
+#BITCOIND_GROUP="demoscore"
+
+# Path to demosd executable
+#BITCOIND_BIN="/usr/bin/demosd"
+
+# Nice value to run demosd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS="-disablewallet"
+
+# The timeout in seconds OpenRC will wait for bitcoind to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+BITCOIND_SIGTERM_TIMEOUT=60

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Demos
+Comment=Demos P2P Cryptocurrency
+Comment[fr]=Demos, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Demos, eşten eşe kriptografik sanal para birimi
+Exec=demos-qt %u
+Terminal=false
+Type=Application
+Icon=demos128
+MimeType=x-scheme-handler/demos;
+Categories=Office;Finance;
